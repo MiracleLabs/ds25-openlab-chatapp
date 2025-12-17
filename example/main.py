@@ -12,14 +12,24 @@ def hide_streamlit_ui():
     st.markdown(
         """
         <style>
+        /* Hide top toolbar */
         header [data-testid="stToolbar"] {
             visibility: hidden;
         }
+
+        /* Hide header */
+        header [data-testid="stHeader"] {
+            visibility: hidden;
+        }
+
+        /* Hide footer */
         footer {
             visibility: hidden;
         }
-        header [data-testid="stHeader"] {
-            visibility: hidden;
+
+        /* Hide sidebar collapse arrow */
+        [data-testid="stSidebarCollapseButton"] {
+            display: none;
         }
         </style>
         """,
@@ -88,7 +98,7 @@ def main():
     st.markdown(dark_blue_html, unsafe_allow_html=True)
 
     st.logo("logos/miracle-logo-dark.png", size="large")
-    st.image("logos/Digital_Summit_24_Logo_Dark.svg", width=80)
+    st.image("logos/Digital_Summit_25_Logo_Dark.svg", width=80)
     css = """
         <style>
             [data-testid="stImage"] {
@@ -141,7 +151,7 @@ def main():
     st.sidebar.markdown('<div class="sidebar-title">Choose Model</div>', unsafe_allow_html=True)
     model_name = st.sidebar.selectbox(
         "",
-        ["gemini-1.5-pro", "gemini-1.5-flash"]
+        ["gemini-2.5-pro", "gemini-2.5-flash"]
     )
     st.sidebar.markdown('<div class="sidebar-title">Temperature</div>', unsafe_allow_html=True)
     temperature = st.sidebar.slider("", min_value=0.0, max_value=1.0, step=0.1, value=0.30)

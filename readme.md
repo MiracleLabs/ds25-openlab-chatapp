@@ -1,4 +1,4 @@
-# DS24 Open Lab | Integrating Gemini APIs with Python and Building a Chatbot App with Streamlit
+# DS'25 Open Lab | Integrating Gemini APIs with Python and Building a Chatbot App with Streamlit
 
 This repository contains the lab for demonstrating Hands-On with Integrating Gemini APIs with Python and Building a Chatbot App with Streamlit. It is one of the open labs brought to you by Miracle's Innovation Labs.
 
@@ -28,6 +28,6 @@ The repository contains detailed documentation and steps for understanding and c
 
 The following people have contributed to the development and delivery of this lab. This Lab is created and owned by the Miracle Innovation Labs Team.
 
-• Veerababu Pilli - Research Associate
+• Bhavana Maddu - Research Associate
 
-• Siva Nukala - Research Associate
+• Sathwik Ramisetty - Research Associate
