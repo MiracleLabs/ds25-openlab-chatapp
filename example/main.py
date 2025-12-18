@@ -57,14 +57,10 @@ def get_gemini_response(user_prompt: str, model_name, temperature, top_p):
         }
 
         prompt = f"""
-        You are an AI assistant. Your task is to understand and analyze input. 
-        Your goal is to assist users interactively based on the following data:
-
-        User's original request: {user_prompt}
-
-        Your responses should be clear, concise, and accurate. Pull information from the diagram context if applicable. 
-        If symbols, flows, or connections are mentioned, provide detailed explanations of their roles. 
-        Maintain a structured approach for complex queries.
+        You are an AI assistant. Your task is to understand and analyze the user's input and provide helpful, accurate, and easy-to-understand responses.
+        Use the user's original request: {user_prompt}
+        Explain concepts clearly, keep responses concise, and provide structured answers for complex topics.
+        Your goal is to assist the user in an interactive and beginner-friendly way.
         """
         response = chat_session.send_message(prompt, generation_config=generation_config)
         return response.text
@@ -151,7 +147,7 @@ def main():
     st.sidebar.markdown('<div class="sidebar-title">Choose Model</div>', unsafe_allow_html=True)
     model_name = st.sidebar.selectbox(
         "",
-        ["gemini-2.5-pro", "gemini-2.5-flash"]
+        ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-pro"]
     )
     st.sidebar.markdown('<div class="sidebar-title">Temperature</div>', unsafe_allow_html=True)
     temperature = st.sidebar.slider("", min_value=0.0, max_value=1.0, step=0.1, value=0.30)
